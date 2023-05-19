@@ -1,0 +1,32 @@
+<!--
+    index.html(社員スキル管理　機能選択)
+
+@author 堀光希
+@version 2.0
+@date    4/18
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Trasitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>社員スキル管理</title>
+</head>
+
+<body>
+    <h2>実習No.2 社員スキル管理</h2>
+    <form name="myForm1" action="indexJmp.php" method="post">
+        <input type="radio" name="skill" value="1"> 社員スキル検索<br>
+        <input type="radio" name="skill" value="2"> スキル情報管理<br>
+        <input type="radio" name="skill" value="3"> 社員情報管理<br>
+        <input type="radio" name="skill" value="4">資格情報管理 <br>
+        <input type="radio" name="skill" value="5">データベース初期化(デバッグ用)<br>
+        <input type="submit" value="選択"><input type="button" onclick="window.open('','_self').close();" value="閉じる">
+    </form>
+
+    
+    
+</body>
+
+</html>
