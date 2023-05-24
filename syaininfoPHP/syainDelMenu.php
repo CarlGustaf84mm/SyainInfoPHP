@@ -47,7 +47,6 @@ if (isset($_SESSION['syainBeans'])) {
             const answer = confirm('削除してもよろしいですか？');
             var flag = answer;
             return flag;
-
         }
         /* クリアボタン */
         function checkClr() {

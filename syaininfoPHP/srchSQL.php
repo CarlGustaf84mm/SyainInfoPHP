@@ -58,6 +58,7 @@ class SrchSQL
 
         /* SQL文作成 */
         $sql = "SELECT syain.syainbangou, syain.syainmei, "
+            . "skill.sikakucode, "
             . "skill.sikakusyutokubi, "
             . "sikaku.sikakuryakusyou "
             . "FROM syain, skill, sikaku "
@@ -84,7 +85,7 @@ class SrchSQL
                 $sql .= ") ";
                 break;
         }
-        $sql .= "ORDER BY syainbangou, syainmei, sikakuryakusyou, sikakusyutokubi;";
+        $sql .= "ORDER BY syainbangou, syainmei, sikakucode, sikakuryakusyou, sikakusyutokubi;";
         $stmt = $pdo->prepare($sql);
 
         /* SQL文実行 */
@@ -96,6 +97,7 @@ class SrchSQL
 
             $srchBeans->setSyainBangou($row['syainbangou']);
             $srchBeans->setSyainMei($row['syainmei']);
+            $srchBeans->setSikakuCode($row['sikakucode']);
             $srchBeans->setSikakuRyakusyou($row['sikakuryakusyou']);
             $srchBeans->setSikakuSyutokubi($row['sikakusyutokubi']);
 

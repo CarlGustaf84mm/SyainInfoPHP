@@ -34,6 +34,7 @@ if(isset($_SESSION['srchList'])) {
         <th align="center" class="No">No.</th>	
           <th align="center">社員番号</th>
           <th align="center">社 員 名</th>
+          <th align="center">資格コード</th>
           <th align="center">資格略称</th>
           <th align="center">資格取得日</th>
         </tr>
@@ -52,6 +53,8 @@ if(isset($_SESSION['srchList'])) {
     <td>
     <?php print($srchBeans->getSyainMei()); ?>
     </td>
+    <td align="center">
+    <?php print($srchBeans->getSikakuCode()); ?>
     <td>
     <?php print($srchBeans->getSikakuRyakusyou()); ?>
     </td>
